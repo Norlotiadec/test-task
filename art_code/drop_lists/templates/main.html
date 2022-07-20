@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<h2>Welcome to our autoservice</h2>
+
+<tr>
+  <td>
+      <label for="services">Choose a service:</label>
+      <select onchange="location=value">
+          {% for service in services %}
+          <option value="s-{{ service.slug }}">{{ service.label }}
+          {% endfor %}
+      </select>
+  </td>
+  <td>
+      <label for="brands">Choose a brand:</label>
+      <select onchange="location=value">
+          {% for brand in brands %}
+          <option value="b-{{ brand.slug }}">{{ brand.label }}
+          {% endfor %}
+      </select>
+  </td>
+  <td>
+      <label for="styles">Choose a style:</label>
+      <select onchange="location=value">
+          {% for style in styles %}
+          <option value="st-{{ style.slug }}">{{ style.label }}
+          {% endfor %}
+      </select>
+  </td>
+</tr>
+</body>
+</html>
